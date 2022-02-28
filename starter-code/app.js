@@ -115,7 +115,9 @@ let sum = function(a, b, c, d) {
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
-let sumNew = (a, b, c, d) => `${a} + ${b} + ${c} + ${d} = ${a + b + c + d}`;
+let sumNew = (a, b, c, d) => {
+  return a+b+c+d;
+};
 
 console.log(sumNew(1, 2, 3, 4));
 
@@ -128,8 +130,15 @@ let objectLit = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
+let newobjectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
+
+console.log(newobjectLit());
 
 let sumAndProduct = function(a, b) {
   let sum = a + b;
@@ -138,16 +147,29 @@ let sumAndProduct = function(a, b) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
+
+let newsumandProduct = (a, b) => {
+  let sum = a + b;
+  let product = a * b;
+  return [sum, product];
+};
+
+console.log(newsumandProduct(3, 9));
 
 let message = function(name) {
   return `Hello, ${name}!`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
+let newMessage = name => {
+  return `Hello, ${name}!`;
+};
+
+console.log(newMessage('Allie'));
 
 let Student = function(name, age, hometown) {
   this.name = name;
@@ -182,7 +204,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+//console.log(Student.courseName());
 
 
 
@@ -193,17 +215,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+ console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//  "this" is the Student object when joe.scope() is invoked.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//  "this" is a window when joe.scopeArrow() is invoked.
 // 3. Explain why "this" is different when an arrow function is used.
 //
